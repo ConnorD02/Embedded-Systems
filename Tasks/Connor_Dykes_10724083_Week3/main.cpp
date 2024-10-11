@@ -10,19 +10,19 @@ private:
 public:
     // Constructor to initialize length and width
     rectangle(double l, double w) {
-        this->length = l;
-        this->width = w;
+        length = l;
+        width = w;
     }
 
     // Function to get the area of the rectangle
     double area() {
-        double a = this->length * this->width;
+        double a = length * width;
         return a;
     }
 
     // Function to get the perimeter of the rectangle
     double perimeter() {
-        double p = (this->length + this->width)*2;
+        double p = (length + width)*2;
         return p;
     }
 };
