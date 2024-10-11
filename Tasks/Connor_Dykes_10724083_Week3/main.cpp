@@ -1,6 +1,7 @@
 #include "mbed.h"
 #include <cstring>
 
+//Initialise class and parameters
 class rectangle {
 private:
     double length;
@@ -9,31 +10,31 @@ private:
 public:
     // Constructor to initialize length and width
     rectangle(double l, double w) {
-        length = l;
-        width = w;
+        this->length = l;
+        this->width = w;
     }
 
     // Function to get the area of the rectangle
     double area() {
-        double a = length * width;
+        double a = this->length * this->width;
         return a;
     }
 
     // Function to get the perimeter of the rectangle
     double perimeter() {
-        double p = (2*length) + (2*width);
+        double p = (this->length + this->width)*2;
         return p;
     }
 };
-//The main function - all executable C / C++ applications have a main function. This is our entry point in the software
+
 int main() {
     // Start serial communication
     printf("Program Starting...\n");
 
-    // Create a Student object
+    // Create a rectangle object
     rectangle rectangle1(10, 5);
 
-    // Output the name and age of the student
+    //Outputs the calcualted area and perimeter of the rectangle
     printf("Rectangle area: %f\n", rectangle1.area());
     printf("Rectangle perimeter: %f\n", rectangle1.perimeter());
 
