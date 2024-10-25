@@ -1,7 +1,7 @@
 #include "mbed.h"
 
 // Define pins
-AnalogIn AIN(PC_0);
+AnalogIn AIN(PA_0);
     // Temperature sensor input (A0)
 PwmOut led(LED1);
     // PWM output for LED (choose any pin)
