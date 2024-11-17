@@ -62,6 +62,7 @@ int main()
 
         //Notify waiting threads that some change has occured
         cond.notify_all();
+        //Can use notify_one to only update one thread. If this were used it would update t1 first, then update t2 on the next use if both threads haven't been updated using update_all since.
 
         //Release the lock (and exit the critical section)
         mutex.unlock();
